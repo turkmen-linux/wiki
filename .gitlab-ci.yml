@@ -7,7 +7,7 @@
 # Full project: https://gitlab.com/pages/plain-html
 pages:
   stage: deploy
-  image: registry.gitlab.com/turkman/devel/assets/docker-images
+  image: registry.gitlab.com/turkmen-linux/devel/assets/docker-images
   script: |
     sh deploy.sh
     mv /output public

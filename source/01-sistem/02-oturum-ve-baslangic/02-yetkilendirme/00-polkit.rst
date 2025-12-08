@@ -79,7 +79,7 @@ Kural dosyalarına benzer şekilde eylem dosyaları da bulunur. Bu dosyalar ise 
 	<policyconfig>
 	  <vendor>Test Vendor</vendor>
 	  <vendor_url>https://example.org</vendor_url>
-	  <action id="org.turkman.test.application">
+	  <action id="org.turkmen.test.application">
 	    <description>Test application</description>
 	    <message>Authentication is required for test application</message>
 	    <message xml:lang="tr">Test uygulaması için yetkilendirme gerekiyor</message>

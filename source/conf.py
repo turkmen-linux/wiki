@@ -6,7 +6,7 @@ import datetime
 
 project = 'Türkmen Wiki'
 copyright = 'Türkmen Linux '+str(datetime.datetime.now().year)
-author = 'turkman'
+author = 'turkmen'
 language = 'tr'
 extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'sphinx_sitemap']
 smartquotes = False

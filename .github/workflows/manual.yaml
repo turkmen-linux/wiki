@@ -34,7 +34,7 @@ jobs:
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
-            image: registry.gitlab.com/turkman/devel/assets/docker-images
+            image: registry.gitlab.com/turkmen-linux/devel/assets/docker-images
             options: -v ${{ github.workspace }}:/root -v /output:/output
             run: |
                 cd /root

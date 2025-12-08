@@ -4,13 +4,13 @@ Ymp paket sistemini kaynak koddan derlemek için şu adımlar izlenmelidir.
 
 Kaynak kodun indirilmesi
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Kaynak koda https://gitlab.com/turkman/devel/sources/ymp adresinden ulaşabilirsiniz.
+Kaynak koda https://gitlab.com/turkmen-linux/devel/sources/ymp adresinden ulaşabilirsiniz.
 
 Öncelikle kaynak kodu `git clone` komutu ile indirelim.
 
 .. code-block:: shell
 
-	$ git clone https://gitlab.com/turkman/devel/sources/ymp.git
+	$ git clone https://gitlab.com/turkmen-linux/devel/sources/ymp.git
 
 Gerekli paketlerin kurulması
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
