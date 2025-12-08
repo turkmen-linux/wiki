@@ -32,7 +32,7 @@ sitemap_filename = 'sitemap.xml'
 sitemap_url_scheme= '{link}'
 # -- Options for HTML output --
 
-html_baseurl = 'https://turkman-linux.github.io/wiki/'
+html_baseurl = 'https://turkmen-linux.gitlab.io/wiki/'
 html_theme = 'theme'
 html_static_path = ['_static']
 import os
