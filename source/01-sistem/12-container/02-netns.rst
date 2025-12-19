@@ -17,7 +17,6 @@ Silmek için ise şu komut kullanılır:
 
 	$ ip nets del deneme
 
-
 Var olanları listelemek için:
 
 .. code-block:: shell
@@ -34,5 +33,46 @@ Bir netns içerisinde komut çalıştırarak o komutun izole bir ağ ortamında 
 
 Bu komut hiçbir ağ arayüzü eklemediğimiz için ağ bağlantısı bulunmayan *deneme* ağında çalıştırılır.
 
+netns içine ağ arayüzü eklenmesi
+++++++++++++++++++++++++++++++++
+Bir ağ arayüzünü netns içine ekleyebilirsiniz. birden çok ethernet ile çalışmanız gerektiğinde kullanışlı olabilmektedir.
+
+.. code-block:: shell
+
+	# eth1 arayüzünü eklemek için (2. ethernet arayüzü)
+	$ ip link set eth1 netns deneme
+	# netns içinde firefox başlatmak için (pingu kullanıcısı ile)
+	$ ip netns exec deneme su pingu -c "firefox"
+
+netns arası iletişim sağlanması
++++++++++++++++++++++++++++++++
+Öncelikle **veth** arayüzü eklememiz gerekmektedir.
+
+.. code-block:: shell
+
+	$ ip link add veth0 type veth peer name veth1
+
+Burada veth0 ve veth1 adında 2 adet veth arayüzümüz oluşmaktadır.
+Arayüzlernden birini netns içine alalım.
+
+.. code-block:: shell
+
+	$ ip link set veth1 netns deneme
+
+Ardından arayüzlere birer ip adresi atayalım.
+
+.. code-block:: shell
+
+	$ ip addr add 10.0.3.1 dev veth0
+	$ ip netns exec deneme ip addr add 10.0.3.2 dev veth1
+
+Artık deneme adındaki netns içerisinden ana makinamıza **10.0.3.1** adresi ile ulaşabilirsiniz. Ana makinanızdan ise **10.0.3.2** adresi ile netns içerisine ulaşabilirsiniz.
+
+.. code-block:: shell
+
+	# netns içinde 8000 portunda tcp dinlemek için
+	$ ip netns exec deneme netcat -l -p 8000
+	# netns içindeki 8000 portuna bağlanmak için
+	$ netcat 10.0.3.2 8000
 
 
