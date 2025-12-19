@@ -41,6 +41,10 @@ Bir ağ arayüzünü netns içine ekleyebilirsiniz. birden çok ethernet ile ça
 
 	# eth1 arayüzünü eklemek için (2. ethernet arayüzü)
 	$ ip link set eth1 netns deneme
+  # loop arayüzünü açalım (127.0.0.1 için)
+  $ ip netns exec deneme ip link set up lo
+	# dhcp ile ip almak için
+	$ busybox udhcpc -i eth1
 	# netns içinde firefox başlatmak için (pingu kullanıcısı ile)
 	$ ip netns exec deneme su pingu -c "firefox"
 
@@ -63,6 +67,12 @@ Ardından arayüzlere birer ip adresi atayalım.
 
 .. code-block:: shell
 
+	# açık hale getirelim
+	$ ip link set up veth0
+	$ ip netns exec deneme ip link set up veth1
+	# loop arayüzünü açalım (127.0.0.1 için)
+	$ ip netns exec deneme ip link set up lo
+	# ip atayalım
 	$ ip addr add 10.0.3.1 dev veth0
 	$ ip netns exec deneme ip addr add 10.0.3.2 dev veth1
 
