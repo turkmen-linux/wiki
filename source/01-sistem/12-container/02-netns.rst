@@ -73,8 +73,14 @@ Ardından arayüzlere birer ip adresi atayalım.
 	# loop arayüzünü açalım (127.0.0.1 için)
 	$ ip netns exec deneme ip link set up lo
 	# ip atayalım
-	$ ip addr add 10.0.3.1 dev veth0
-	$ ip netns exec deneme ip addr add 10.0.3.2 dev veth1
+	$ ip addr add 10.0.3.1/24 dev veth0
+	$ ip netns exec deneme ip addr add 10.0.3.2/24 dev veth1
+	# varsayılan route verelim
+	$ ip netns exec deneme ip route add default via 10.0.3.1 dev veth1
+	# yetkilendirme verelim
+	$ iptables -t nat -A POSTROUTING -o veth0 -j MASQUERADE
+	$ iptables -A FORWARD -i veth0 -j ACCEPT
+	$ iptables -A FORWARD -o veth0 -j ACCEPT
 
 Artık deneme adındaki netns içerisinden ana makinamıza **10.0.3.1** adresi ile ulaşabilirsiniz. Ana makinanızdan ise **10.0.3.2** adresi ile netns içerisine ulaşabilirsiniz.
 
@@ -85,4 +91,13 @@ Artık deneme adındaki netns içerisinden ana makinamıza **10.0.3.1** adresi i
 	# netns içindeki 8000 portuna bağlanmak için
 	$ netcat 10.0.3.2 8000
 
+Dış ağa bağlantı sağlanması
++++++++++++++++++++++++++++
+Dış ağa bağlantı sağlanabilmesi için yönlendirmenin açık olması ve ağ kuralı gerekmektedir. Dışa erişim ayarlayalım.
 
+.. code-block:: shell
+
+	$ sysctl net.ipv4.ip_forward=1
+	$ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+Artık **eth0** üzerinden dış ağa erişim sağlanabilir.
