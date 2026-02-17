@@ -1,4 +1,3 @@
-```rst
 Network Block Device (nbd)
 ==========================
 Network Block Device (nbd), bir ağ üzerindeki disk görüntülerini veya diğer blok cihazlarını uzak bir sistemde kullanmanızı sağlayan bir sistem aracıdır. NBD, istemci-sunucu mimarisi kullanarak çalışır; istemci, NBD sunucusuna bağlanarak uzak bir blok cihazına erişim sağlar. Bu, veri depolama ve yedekleme çözümleri için oldukça faydalıdır.
@@ -58,5 +57,4 @@ Son olarak, varsa bölümlerin listesini güncelleyin:
     $ partprobe /dev/nbd0
 
 Artık **/dev/nbd0** blok aygıtını kullanabilirsiniz.
-```
 
