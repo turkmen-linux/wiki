@@ -24,7 +24,7 @@ Ardından, NBD sunucusunu başlatmak için şu komutu kullanabilirsiniz:
     # -b 0.0.0.0 dışa açılacak adres
     # -p port numarası
     # -e en fazla bağlantı sayısı
-    $ qemu-nbd -f qcow2 -b 0.0.0.0 -p 10809 -e 10
+    $ qemu-nbd -f qcow2 -b 0.0.0.0 -p 10809 -e 10 test.img
 
 Kullanıcı tarafı
 ++++++++++++++++
