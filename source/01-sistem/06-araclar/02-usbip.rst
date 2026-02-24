@@ -49,7 +49,7 @@ Paylaşımı sonlandırmak için:
 
 .. code-block:: shell
 
-	usbip unbind -b 3-1.5
+	$ usbip unbind -b 3-1.5
 
 Kullanıcı tarafı
 ++++++++++++++++
