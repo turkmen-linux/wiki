@@ -14,7 +14,7 @@ Türkmen Linux, canlı modda çalıştırıldığında Zram oluşturur ve bu ala
 
 Çekirdek:
 +++++++++
-Türkmen linux çekirdek yapılandırması varsayılan olarak `hardened<https://archlinux.org/packages/extra/x86_64/linux-hardened/>`_ olarak sağlanır.
+Türkmen linux çekirdek yapılandırması varsayılan olarak `hardened <https://archlinux.org/packages/extra/x86_64/linux-hardened/>`_ olarak sağlanır.
 
 Bununla birlikte **sysctl.conf** yapılandırmaları önyüklü olarak gelmektedir.
 
