@@ -13,7 +13,7 @@ Türkmen Linux Türkiye originli bir dağıtımdır. 🇹🇷 Geliştirilme sebe
 
 * Bütün paketler header dosyaları ve static kütüphaneler ile beraber gelmektedir. Bu sayede derleme yapması diğer dağıtımlardan daha kolaydır.
 * Hızlı çalışan karışık (ikili ve kaynak) paket sistemine sahiptir. İsteyenler kaynak koddan paket kurarken isteyenler derlenmiş paketleri kullanabilirler.
-* Varsayılan olarak **sıkılaştırılmış**(hardened) linux dağıtımıdır. Bu sayede ek çaba sarf etmeden güvenle kullanılabilir.
+* Varsayılan olarak **sıkılaştırılmış** (hardened) linux dağıtımıdır. Bu sayede ek çaba sarf etmeden güvenle kullanılabilir.
 
 Logonun anlamı
 ^^^^^^^^^^^^^^
