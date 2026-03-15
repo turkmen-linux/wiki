@@ -24,6 +24,8 @@ Initramfs:
 ++++++++++
 Türkmen linux initramfs sistemi olarak **mkinitrd** kullanır. Bu initramfs sistemi hook çalıştırmak için cgroup kullanır ve sistemi başlatmadan önce kendisi dışında kalan tüm süreçleri öldürür. Bu sayede initramfs içerisinden kendisi dışında başka bir şeyin çalıştırılmasına engel olur.
 
+Açılış sırasında **OEM** var mı diye kontrol edilir ve tespit edilmesi durumunda kullanıcıya uyarı mesajı verilir.
+
 Sistem seviyesi önlemler:
 +++++++++++++++++++++++++
 /tmp dizini **noexec** olarak bağlanır. Bu sayede herhangi bir kullanıcının buraya bir dosya koyup çalıştırmasının önüne geçilir.
@@ -32,3 +34,8 @@ Kök dizin **nosuid** olarak bağlanır. Suid ihtiyacı olan dosyalar **/etc/sui
 
 **/sys/class/dmi** dizine boş dizin bağlanır. Bu sayede çalışan uygulamaların hangi donanımı kullandığınızı görmesi engellenir.
 
+/proc dizini **hidepid=2** olarak bağlanır. Tüm çalışan süreçleri görmek için kullanıcının **proc** gurubunda yer alması gerekmektedir.
+
+Diğer
++++++
+Udisks2 parolasız disk bağlama özelliği kapatılmıştır. Disk bağlamak için yetkili kullanıcı gerekmektedir.
