@@ -8,7 +8,7 @@ project = 'Türkmen Wiki'
 copyright = 'Türkmen Linux '+str(datetime.datetime.now().year)
 author = 'turkmen'
 language = 'tr'
-extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'sphinx_sitemap']
+extensions = ['sphinx.ext.autodoc', 'rst2pdf.pdfbuilder', 'simple_sphinx_xml_sitemap']
 smartquotes = False
 
 # -- Options for PDF output --
@@ -26,11 +26,6 @@ pdf_default_dpi = 72
 pdf_compressed = True
 pdf_language = "tr_TR"
 pdf_fit_mode = "shrink"
-
-# -- Options for sitemap --
-sitemap_filename = 'sitemap.xml'
-sitemap_url_scheme = '{link}'
-sitemap_show_lastmod = True
 
 # -- Options for HTML output --
 

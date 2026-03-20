@@ -6,7 +6,7 @@ pydefault 3.13
 python3.13 -m ensurepip
 pip3.13 install sphinx
 pip3.13 install rst2pdf
-pip3.13 install sphinx-sitemap
+pip3.13 install simple-sphinx-xml-sitemap
 # install font
 wget https://github.com/dejavu-fonts/dejavu-fonts/releases/download/version_2_37/dejavu-fonts-ttf-2.37.zip -O font.zip
 unzip font.zip
