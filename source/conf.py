@@ -29,7 +29,9 @@ pdf_fit_mode = "shrink"
 
 # -- Options for sitemap --
 sitemap_filename = 'sitemap.xml'
-sitemap_url_scheme= '{link}'
+sitemap_url_scheme = '{link}'
+sitemap_show_lastmod = True
+
 # -- Options for HTML output --
 
 html_baseurl = 'https://turkmen-linux.gitlab.io/wiki/'
