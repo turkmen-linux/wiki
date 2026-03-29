@@ -29,7 +29,7 @@ pdf_fit_mode = "shrink"
 
 # -- Options for HTML output --
 
-html_baseurl = 'https://turkmen-linux.gitlab.io/wiki/'
+html_baseurl = 'https://turkmen-linux.gitlab.io/devel/doc/wiki/'
 html_theme = 'theme'
 html_static_path = ['_static']
 import os
