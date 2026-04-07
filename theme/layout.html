@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
+<link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css">
     <link rel="stylesheet" href="{{ pathto('_static/styles.css', 1) }}" type="text/css">
     <link rel="canonical" href="{{ canonical_url }}">
-    <meta name="description" content="{{ title }}">
-    <meta name="keywords" content="{{ title }}, {{ project }}, {{ copyright }}">
+    <meta name="description" content="{{ title }} - {{ project }}">
+    <meta name="keywords" content="{{ title }}, {{ project }}, TurkmenOS, wiki, {{ copyright }}, open source, Linux, GNU">
     <meta name="author" content="{{ copyright }}">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="{{ project }}" />
@@ -17,13 +17,14 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{ html_baseurl }}/{{ pathto('_static/logo.svg', 1) }}" />
     <meta name="google-site-verification" content="qhh-Yt-WAJZMRVNqeKnxIOyY0-OOgnUTdMHh4cF0R84" />
+    <link rel="alternate" hreflang="{{ language }}" href="{{ canonical_url }}">
 </head>
 <body>
     <div class="container">
-        <div class="main-content">
+        <main class="main-content" role="main">
             {{ body }}
-        </div>
-        <nav class="sidebar">
+        </main>
+        <aside class="sidebar" role="complementary">
             <center>
             <div class="logo">
                 <a href="{{ pathto('index.html', 1) }}">
@@ -42,13 +43,13 @@
             <div class="links">
             {{ toctree(includehidden=theme_globaltoc_includehidden, collapse=theme_globaltoc_collapse, maxdepth=theme_globaltoc_maxdepth) }}
             </div>
-        </nav>        <div class="footer">
+        </aside>
+        <footer class="footer" role="contentinfo">
                 <p>{{ copyright }}
                 <br>This site is free of cookies and javascript
                 </p>
                 <br>
-        </div>
+        </footer>
     </div>
 </body>
 </html>
-
