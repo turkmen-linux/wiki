@@ -13,6 +13,20 @@ Ardından **wireplumber** yükleyip masaüstü ortamı ile çalışmasını sağ
 
 	$ ymp install pipewire wireplumber
 
+
+Türkmen linuxta pipewire sistem servisi olarak çalışmaktadır. Bu sebeple sistem servislerini çaşılışa eklemelisiniz.
+
+.. code-block:: shell
+
+	# başlangıçta çalıştırmak için
+	$ rc-update add pipewire default
+	$ rc-update add pipewire-pulse default
+	$ rc-update add wireplumber default
+	# başlatmak için
+	$ rc-service pipewire start
+	$ rc-service pipewire-pulse start
+	$ rc-service pipewire start
+
 Kurulum tamamlandıktan sonra oturumunuzu kapatıp açmanız gerekebilir.
 
 Çalışıp çalışmadığını test etmek için **pactl info** ve **wpctl status** komutlarını kullanarak pipewire ile ilgili bilgi alabilirsiniz.

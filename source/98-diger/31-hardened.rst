@@ -36,6 +36,8 @@ Kök dizin **nosuid** olarak bağlanır. Suid ihtiyacı olan dosyalar **/etc/sui
 
 /proc dizini **hidepid=2** olarak bağlanır. Tüm çalışan süreçleri görmek için kullanıcının **proc** gurubunda yer alması gerekmektedir.
 
+Pipewire sistem servisi olarak çalışmaktadır. Bu sayede /dev/snd dizinine erişime ihtiyaç duymadan pipewire kullanılabilmektedir.
+
 Diğer
 +++++
 Udisks2 parolasız disk bağlama özelliği kapatılmıştır. Disk bağlamak için yetkili kullanıcı gerekmektedir.
