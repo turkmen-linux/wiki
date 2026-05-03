@@ -87,7 +87,10 @@ Ardından **package.json** dosyasına aşağıdaki gibi ekleme yapın:
 .. code-block:: shell
 
 	"scripts": {
-	    "start": "bun run ./index.js"
+	    "start": "bun run ./index.js",
+	    "build": "bun build ./index.js --compile --outfile hello-world",
 	  },
 
 Projeyi çalıştırmak için `bun run start` komutunu kullanabilirsiniz.
+
+Projeyi derlemek için `bun run build`  komutunu kullanabilirsiniz.
