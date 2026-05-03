@@ -1,7 +1,7 @@
 Javascript
 ==========
 npm kurulumu
-++++++++++++
+************
 Öncelikle yoksa **~/.profile** dosyasını oluşturun. Ardından **git** komutu yoksa yükleyin.
 
 .. code-block:: shell
@@ -23,13 +23,11 @@ Kontrol etmek için `npm --version` komutunu kullanabilirsiniz.
 
 Proje oluşturma
 +++++++++++++++
-İlk olarak proje dizini oluşturalım. Ardından `npm init` komutu ile package.json dosyasını oluşturalım.
+İlk olarak proje dizini oluşturalım.
 
 .. code-block:: shell
 
 	$ mkdir test
-	$ cd test
-	$ npm init
 
 `index.js` dosyasını oluşturalım.
 
@@ -56,3 +54,40 @@ Ardından `package.json` dosyamızı aşağıdaki gibi yazalım.
 
 
 Projeyi çalıştırmak için `npm run start` komutunu kullanabiliriz.
+
+Bun kurulumu
+************
+**npm** alternatifi olarak **bun** kullanabilirsiniz.
+Öncelikle https://bun.sh/ adresinden bun yüklenir.
+
+.. code-block:: shell
+
+	$ curl https://bun.sh/install | bash
+
+Ardından gerekli çevresel değişkenler eklenir.
+
+.. code-block:: shell
+
+	$ echo 'export BUN_INSTALL="$HOME/.bun"' >> ~/.profile
+	$ echo 'export PATH=$BUN_INSTALL/bin:$PATH' >> ~/.profile
+
+
+Proje oluşturma
++++++++++++++++
+İlk olarak proje dizini oluşturulur ve `bun init` komutu çalıştırılır.
+
+.. code-block:: shell
+
+	$ mkdir test
+	$ cd test
+	$ bun init
+
+Ardından **package.json** dosyasına aşağıdaki gibi ekleme yapın:
+
+.. code-block:: shell
+
+	"scripts": {
+	    "start": "bun run ./index.js"
+	  },
+
+Projeyi çalıştırmak için `bun run start` komutunu kullanabilirsiniz.
