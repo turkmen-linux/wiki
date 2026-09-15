@@ -74,3 +74,23 @@ Bu hatanın nereden geldiğini öğrenmek için **backtrace** kullanabiliriz:
 
 Hatanın bulunduğu satıra giderek kaynak koddaki sorunu bulup düzeltebilirsiniz.
 
+aclocal-1.x bulunamadı hatası
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bu hata genellikte eski sürüm automake kullanılarak yapılandırılmış projelerde meydana gelir ve aşağıdakine gibi bir hatadır.
+
+.. code-block:: shell
+
+	build-aux/missing' aclocal-1.17 -I m4
+	.../build-aux/missing: line 85: aclocal-1.17: command not found
+	WARNING: 'aclocal-1.17' is missing on your system.
+	         You should only need it if you modified 'acinclude.m4' or
+	         'configure.ac' or m4 files included by 'configure.ac'.
+	make: *** [Makefile:2427: aclocal.m4] Error 127
+
+Bu hatayı çözmek için `autoreconf -vfi` komutunu kullanabilirsiniz. Alternatif olarak şu komut ile eski sürüme uyumlu hale getirebilirsiniz.
+
+.. code-block:: shell
+
+	ln -s aclocal /usr/local/bin/aclocal-1.17
+	ln -s automake /usr/local/bin/automake-1.17
+
