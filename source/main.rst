@@ -1,8 +1,8 @@
 Türkmen Wikiye Hoşgeldiniz
 ==========================
-Bu wikiye katkı sağlamak için https://gitlab.com/turkmen-linux/devel/doc/wiki/ adresine pull request gönderebilirsiniz.
+Bu wikiye katkı sağlamak için https://codeberg.org/turkmen-linux/wiki/ adresine pull request gönderebilirsiniz.
 
-Bu dokümana https://turkmen-linux.gitlab.io/devel/doc/wiki/rst2pdf.pdf adresinden çevirimdışı pdf formatında da erişebilirsiniz.
+Bu dokümana https://turkmen-linux.github.io/wiki/rst2pdf.pdf adresinden çevirimdışı pdf formatında da erişebilirsiniz.
 
 Bu doküman `python-sphinx <https://www.sphinx-doc.org>`_. kullanılarak oluşturulmuştur. Dokümanın kendisi `GPL (V3) <https://www.gnu.org/licenses/gpl-3.0.en.html>`_ lisansına sahiptir.
 
@@ -22,4 +22,4 @@ Türkmen linuxun logosu mavi zemin üzerine 3 hilalden oluşmaktadır. Logodaki 
 Kaynak kod yansılarımız:
 
 * https://github.com/turkmen-linux
-* https://gitlab.com/turkmen-linux
+* https://codeberg.org/turkmen-linux
